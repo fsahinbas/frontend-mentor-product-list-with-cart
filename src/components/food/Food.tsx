@@ -1,8 +1,15 @@
 import React from "react";
 import styles from "./food.module.css";
-import { Product } from "../../types/types";
+import { CartItem, Product } from "../../types/types";
 
-const Food = (props: Product[]) => {
+type FoodProps = {
+  product: Product;
+  cartItems: CartItem[];
+  handleAddToCart: (product: Product) => void;
+  handleDecrement: (name: string) => void;
+  handleIncrement: (name: string) => void;
+};
+const Food = (props: FoodProps) => {
   const { category, name, price, image } = props.product;
   const quantity =
     props.cartItems.filter((item) => item.name === name)[0] &&

@@ -1,8 +1,12 @@
 import React from "react";
 import styles from "./cart.module.css";
 import { CartItem } from "../../types/types";
-
-const Cart = (props: { cartItems: CartItem[] }) => {
+type CartProps = {
+  cartItems: CartItem[];
+  handleRemoveItem: (name: string) => void;
+  cartTotalQuantity: number;
+};
+const Cart = (props: CartProps) => {
   const { cartItems, cartTotalQuantity } = props;
   const cartItemsElements = cartItems.map((cartItem) => (
     <div className={styles.cartItem} key={cartItem.name}>

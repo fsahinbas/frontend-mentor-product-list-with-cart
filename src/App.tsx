@@ -59,7 +59,6 @@ function App() {
             <Food
               key={product.name}
               product={product}
-              key={product.name}
               handleAddToCart={handleAddToCart}
               handleDecrement={handleDecrement}
               handleIncrement={handleIncrement}
