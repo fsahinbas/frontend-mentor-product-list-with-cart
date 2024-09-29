@@ -7,6 +7,7 @@ import Cart from "./components/cart/Cart";
 
 function App() {
   const [products, setProducts] = React.useState(data);
+  setProducts(data);
   const [cartItems, setCartItems] = React.useState<CartItem[]>([]);
 
   const cartTotalQuantity = cartItems.reduce(
