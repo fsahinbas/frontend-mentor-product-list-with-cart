@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./App.css";
 import data from "./data.json";
 import Food from "./components/food/Food";
@@ -7,6 +7,9 @@ import Cart from "./components/cart/Cart";
 
 function App() {
   const [products, setProducts] = React.useState(data);
+  useEffect(() => {
+    setProducts(data);
+  }, []);
   setProducts(data);
   const [cartItems, setCartItems] = React.useState<CartItem[]>([]);
 
