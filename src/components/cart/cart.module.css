@@ -1,0 +1,141 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  width: 100%;
+  padding: var(--gap);
+  background-color: var(--color-white);
+  border-radius: 0.75rem;
+  margin-top: 2rem;
+}
+
+@media screen and (min-width: 1440px) {
+  .wrapper {
+    width: calc(24rem + var(--gap) * 2);
+    margin-top: 0;
+  }
+}
+.title {
+  color: var(--color-red);
+}
+
+.name {
+  color: var(--color-rose-900);
+  font-weight: 600;
+}
+
+.quantity {
+  color: var(--color-red);
+  font-weight: 600;
+}
+
+.price {
+  color: var(--color-rose-400);
+}
+
+.total {
+  color: var(--color-rose-500);
+  font-weight: 600;
+}
+
+.orderTotal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.cartItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5rem;
+  width: 100%;
+  border-bottom: 1px solid var(--color-rose-100);
+  padding-bottom: 1rem;
+}
+
+.btnRemove {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  padding: 0.25rem;
+  border: 1px solid var(--color-rose-400);
+  background-color: var(--color-white);
+  cursor: pointer;
+}
+
+.btnRemove:hover {
+  border-color: var(--color-black);
+}
+
+.btnRemove:hover svg path {
+  fill: var(--color-black);
+}
+
+.btnConfirm {
+  background-color: var(--color-red);
+  color: var(--color-white);
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  outline: none;
+  border-radius: 999px;
+  position: relative;
+}
+
+.btnConfirm:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 999px;
+  background-color: rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.btnConfirm:hover:after {
+  opacity: 1;
+}
+
+.btnConfirm > span {
+  position: relative;
+  z-index: 5;
+  cursor: pointer;
+}
+
+.delivery {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--color-rose-50);
+  border-radius: 0.5rem;
+  width: 100%;
+  margin: var(--gap) 0;
+  padding: 1rem;
+}
+
+.emptyCart {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.emptyCart img {
+  width: 8rem;
+  aspect-ratio: 1;
+}

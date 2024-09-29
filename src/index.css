@@ -1,0 +1,138 @@
+*,
+*::before,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Red Hat Text", sans-serif;
+  background-color: var(--color-rose-50);
+}
+
+main {
+  padding: var(--gap);
+}
+/* VARIABLES */
+
+:root {
+  --gap: 1.5rem;
+
+  --color-red: #c73b0f;
+  --color-green: #1ea575;
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-rose-900: #260f08;
+  --color-rose-500: #87635a;
+  --color-rose-400: #ad8a85;
+  --color-rose-300: #caafa7;
+  --color-rose-100: #f5eeec;
+  --color-rose-50: #fcf8f6;
+
+  --fs-xl: 2.5rem;
+  --fs-lg: 1.5rem;
+  --fs-md: 1rem;
+  --fs-sm: 0.875rem;
+
+  --fw-xl: 700;
+  --fw-lg: 600;
+  --fw-md: 500;
+  --fw-sm: 400;
+
+  --lh-xl: 150%;
+  --lh-lg: 125%;
+  --lh-md: 120%;
+  --lh-sm: 100%;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --fs-xl: 3.5rem;
+    --fs-lg: 2.25rem;
+    --fs-md: 1.5rem;
+    --fs-sm: 1.125rem;
+
+    --gap: 2.5rem;
+  }
+}
+
+@media (min-width: 1140px) {
+  :root {
+    --fs-xl: 3.5rem;
+    --fs-lg: 2.25rem;
+    --fs-md: 1.5rem;
+    --fs-sm: 1.125rem;
+  }
+}
+
+/* UTILITIES */
+
+.text-preset-1 {
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-xl);
+  line-height: var(--lh-md);
+}
+
+.text-preset-2 {
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-xl);
+  line-height: var(--lh-lg);
+}
+
+.text-preset-3 {
+  font-size: var(--fs-md);
+  font-weight: var(--fw-lg);
+  line-height: var(--lh-xl);
+}
+
+.text-preset-4 {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-md);
+  line-height: var(--lh-xl);
+}
+
+.text-preset-5 {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-lg);
+  line-height: var(--lh-xl);
+}
+
+section.deserts {
+}
+
+section.deserts .food-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+section.deserts h1 {
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  section.deserts .food-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 2rem;
+    column-gap: 1.5rem;
+  }
+}
+
+@media (min-width: 1140px) {
+  main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  section.desert {
+    width: 50rem;
+  }
+}
