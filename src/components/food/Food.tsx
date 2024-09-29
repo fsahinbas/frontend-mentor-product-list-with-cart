@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./food.module.css";
 import { CartItem, Product } from "../../types/types";
 
