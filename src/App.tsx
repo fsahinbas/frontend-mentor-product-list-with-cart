@@ -10,7 +10,6 @@ function App() {
   useEffect(() => {
     setProducts(data);
   }, []);
-  setProducts(data);
   const [cartItems, setCartItems] = React.useState<CartItem[]>([]);
 
   const cartTotalQuantity = cartItems.reduce(
